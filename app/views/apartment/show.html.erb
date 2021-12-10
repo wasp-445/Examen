@@ -1,0 +1,11 @@
+<div class="card col-5 mt-5">
+    <div class="card-body p-3">
+
+    <h3 class="my-5 card-title">Departamento <%= @apartment.numero_departamento %></h3>
+
+    <p class="card-text">Departamento perteneciente al Edificio <%= @apartment.building.nombre %></p>
+    <p class="mb-5 card-text">id Edificio: <%= @apartment.building_id %></p>
+
+    <a class="btn btn-dark" href="/apartment/index"> Volver a lista de Departamentos </a>
+    </div>
+</div>

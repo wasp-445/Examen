@@ -1,0 +1,39 @@
+<div class="p-3 mb-5 bg-light text-dark"><h1>Crear Departamentos</h1></div>
+<div class="row justify-content-between"> 
+<div class="col-5">
+
+<form class="form-group" method="post">
+    <input class="form-control" type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    <label class="form-label" for="numero_departamento">Numero</label>
+    <input class="form-control" id="numero_departamento" name="numero_departamento" type="text" required>
+    <br>
+    <label class="form-label" for="building_id">Edificio</label>
+    
+    <select class="form-select mb-5" name="building_id">
+    <option disabled selected value> -- Selecciona un Edificio -- </option>
+        <% @buildings.each do |building| %>
+            <option value="<%= building.id %>"><%= building.nombre %> </option>
+        <% end %>
+
+    </select>
+    <input class="mb-3 btn btn-dark" type="submit" value= "Enviar">
+
+</form>
+</div> 
+<div class="card col-5">
+    <div class="card-body">
+        <h5 class="card-title">Instrucciones</h5>
+        <p class="card-text">
+            <ul>
+                <li>Ingresar n° de Departamento</li>
+                <li>Elegir Edificio</li>
+                <li>Hacer click en Enviar</li>
+            </ul>
+        </p>
+        <p>Atención: No puedes guardar dos departamentos con el mismo numero, si lo intentas el segundo departamento no será guardado.</p>
+    </div>
+
+</div>
+</div>
+
+<a class="btn btn-dark" href= "/apartment/index">Lista de Departamentos</a>

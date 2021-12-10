@@ -1,0 +1,28 @@
+<div class="p-3 mb-5 bg-light text-dark"><h1>Administración de Edificios</h1></div>
+
+<table class="table mb-5 table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Dirección</th>
+            <th>Ciudad</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @buildings.each do |building| %>
+            <tr>
+                <td> <%= building.id %></td>
+                <td> <%= building.nombre %></td>
+                <td> <%= building.direccion %></td>
+                <td> <%= building.ciudad %></td>
+                <td> <a class="btn btn-dark btn-sm" href="/building/<%=building.id %>"> Detalle </a></td>
+            </tr>
+        <% end %>
+
+    </tbody>
+          
+</table>
+
+<a class="btn btn-dark info mb-3" href="/building/new"> Crear Edificio </a> <br> 
+<a class="btn btn-dark" href="/apartment/index"> Lista de Departamentos </a>

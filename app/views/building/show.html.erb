@@ -1,0 +1,29 @@
+<div class="row justify-content-between"> 
+    <div class="col-5 card my-5">
+        <div class="card-body">     
+            <h3 class="card-title mb-5">Edificio: <%= @building.nombre %></h3>
+            <p class="card-text">Edificio id: <%= @building.id %></p>
+            <p class="card-text">Dirección: <%= @building.direccion %></p>
+            <p class="card-text">Ciudad: <%= @building.ciudad %></p>
+        </div>
+    </div>
+    <div class="col-3 mt-5">
+        <table class="table table-bordered border-dark">
+            <thead>
+                <tr class="text-center">
+                    <th>Departamento N°</th>
+                </tr>
+            </thead>
+            <% @building.apartments.each do |apartment| %>
+                <tbody>
+                    <td class="text-center">
+                        <%= apartment.numero_departamento %> <a href= "/apartments/<%= apartment.id %>">
+                    </td>
+                </tbody>
+        
+
+            <% end %>
+        </table>
+    </div>
+</div>
+<a class= "btn btn-dark" href="/building/index">Lista de Edificios </a>

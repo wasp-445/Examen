@@ -1,0 +1,23 @@
+<div class="p-3 mb-5 bg-light text-dark"><h1>Crear Edificios</h1></div>
+<h1 class="my-5"></h1>
+ 
+<form class="form-group col-5" method="post">
+    <input class="form-control" type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+
+    <label class="form-label" for="building_name">Nombre del Edificio</label>
+    <input class="form-control" id="building_name" name="building_name" type="text" required>
+
+
+    <label class="form-label" for="address">Dirección</label>
+    <input class="form-control" id="address" name="address" type="text" required>
+
+
+    <label class="form-label" for="city">Ciudad</label>
+    <input class="form-control mb-5" for="city" name="city" type="text" required>
+
+    <input class="mb-3 btn btn-dark" type= "submit" value="Enviar">
+
+
+</form>
+<a class="btn btn-dark" href= "/building/index">Lista de Edificios</a>
